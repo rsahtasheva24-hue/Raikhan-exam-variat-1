@@ -1,4 +1,6 @@
-number_input = input()
+n = input().strip()
 
-digit_count = len(str(abs(int(number_input))))
-print(digit_count)
+if n[0] == '-':
+    n = n[1:]   
+
+print(len(n))
