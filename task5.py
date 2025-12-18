@@ -2,15 +2,13 @@ nums = list(map(int, input().split()))
 target = int(input())
 
 seen = set()
-found = False
+result = []
 
 for num in nums:
     needed = target - num
     if needed in seen:
-        print([needed, num])
-        found = True
+        result = [needed, num]
         break
     seen.add(num)
 
-if not found:
-    print([])
+print(result)
