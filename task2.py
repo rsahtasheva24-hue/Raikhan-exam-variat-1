@@ -1,4 +1,13 @@
-input_string = input()
+def get_fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1
+        return 1
+    
+    a, b = 0, 1
+    for _ in range(2, n + 1)
+        a, b = b, a + b
+    return b
 
-reversed_string = input_string[::-1]
-print(reversed_string)
+position = int(input())
+print(get_fibonacci(position))
