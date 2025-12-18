@@ -1,9 +1,13 @@
-nums = list(map(int, input().split()))
+items = input().split()
 
-result = []
-
-for num in nums:
-    if not result or num != result[-1]:
-        result.append(num)
-
-print(*result)
+if not items:
+    print("")
+else:
+    result = [items[0]]
+    
+    for i in range(1, len(items)):
+    
+        if items[i] != items[i-1]:
+            result.append(items[i])
+            
+    print(" ".join(result))
