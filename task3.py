@@ -1,15 +1,19 @@
-n = int(input())
-
-if n <= 1:
-    print("NO")
-else:
-    is_prime = True
-    for i in range(2, int(n ** 0.5) + 1):
+def is_prime(n):
+    if n <= 1:
+        return "NO"
+    
+    if n == 2:
+        return "YES"
+    
+    if n % 2 == 0:
+        return "NO"
+    
+    limit = int(math.sqrt(n))
+    for i in range(3, limit + 1, 2):
         if n % i == 0:
-            is_prime = False
-            break
+            return "NO"
+            
+    return "YES"
 
-    if is_prime:
-        print("YES")
-    else:
-        print("NO")
+num = int(input())
+print(is_prime(num))
