@@ -1,13 +1,7 @@
-items = input().split()
+num = input().strip()
 
-if not items:
-    print("")
+if num == num[::-1]:
+    print("YES")
 else:
-    result = [items[0]]
-    
-    for i in range(1, len(items)):
-    
-        if items[i] != items[i-1]:
-            result.append(items[i])
-            
-    print(" ".join(result))
+    print("NO")
+
